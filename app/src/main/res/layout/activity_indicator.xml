@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainIndicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbIndicator"
+        style="@style/Toolbar"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/icons8pulse"
+        app:subtitle="@string/subTitleIndicator"
+        app:subtitleTextAppearance="@style/Toolbar.SubTitle"
+        app:title="@string/TitleHM"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <TextView
+        android:id="@+id/txtWeight"
+        style="@style/TextView"
+        android:layout_width="0dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/txtWeight"
+        app:layout_constraintStart_toStartOf="@+id/editWeight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        style="@style/editText"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/editWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tbIndicator" />
+
+    <TextView
+        android:id="@+id/txtSteps"
+        style="@style/TextView"
+        android:layout_marginTop="15dp"
+        android:text="@string/txtSteps"
+        app:layout_constraintStart_toStartOf="@+id/editWeight"
+        app:layout_constraintTop_toBottomOf="@+id/editWeight" />
+
+    <EditText
+        android:id="@+id/editSteps"
+        style="@style/editText"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/editSteps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSteps" />
+
+    <Button
+        android:id="@+id/btnSaveIndicator"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editSteps" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

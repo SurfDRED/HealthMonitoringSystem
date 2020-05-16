@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPressure"
+    style="@style/TextView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbPressure"
+        style="@style/Toolbar"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/icons8pulse"
+        app:subtitle="@string/subTitlePressure"
+        app:subtitleTextAppearance="@style/Toolbar.SubTitle"
+        app:title="@string/TitleHM"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <TextView
+        android:id="@+id/txtUpperPressure"
+        style="@style/TextView"
+        android:layout_width="0dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/txtUpperPressure"
+        app:layout_constraintStart_toStartOf="@id/editUpperPressure"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editUpperPressure"
+        style="@style/editText"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/editUpperPressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tbPressure" />
+
+    <TextView
+        android:id="@+id/txtLowerPressure"
+        style="@style/TextView"
+        android:layout_marginTop="15dp"
+        android:text="@string/txtLowerPressure"
+        app:layout_constraintStart_toStartOf="@id/editUpperPressure"
+        app:layout_constraintTop_toBottomOf="@id/editUpperPressure" />
+
+    <EditText
+        android:id="@+id/editLowerPressure"
+        style="@style/editText"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/editLowerPressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLowerPressure" />
+
+    <TextView
+        android:id="@+id/textPuls"
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/txtPuls"
+        app:layout_constraintStart_toStartOf="@id/editLowerPressure"
+        app:layout_constraintTop_toBottomOf="@id/editLowerPressure" />
+
+    <EditText
+        android:id="@+id/editPuls"
+        style="@style/editPuls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/editPulse"
+        app:layout_constraintStart_toStartOf="@id/textPuls"
+        app:layout_constraintTop_toBottomOf="@id/textPuls" />
+
+    <CheckBox
+        android:id="@+id/chkTachycardia"
+        style="@style/CheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/chkTachycardia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/editPuls"
+        app:layout_constraintTop_toBottomOf="@id/textPuls" />
+
+    <TextView
+        android:id="@+id/textDataTime"
+        style="@style/TextDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSavePressure" />
+
+    <Button
+        android:id="@+id/btnSavePressure"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPuls" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

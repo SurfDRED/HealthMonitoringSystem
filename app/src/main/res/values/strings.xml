@@ -1,0 +1,28 @@
+<resources>
+    <string name="TitleHM">Комплексная система мониторинга здоровья</string>
+    <string name="Devel">Ячменцев Д.Н.</string>
+    <string name="subTitleIndicator">Жизненные показатели</string>
+    <string name="subTitlePressure">Показания давления</string>
+    <string name="txtUser">ФИО</string>
+    <string name="txtAge">Возраст</string>
+    <string name="editUser" />
+    <string name="editAge" />
+    <string name="btnSave">Сохранить</string>
+    <string name="btnPressure">Давление</string>
+    <string name="btnIndicator">Показатели</string>
+    <string name="txtWeight">Вес</string>
+    <string name="editWeight" />
+    <string name="txtSteps">Количество шагов</string>
+    <string name="editSteps" />
+    <string name="txtPuls">Пульс</string>
+    <string name="editPulse" />
+    <string name="chkTachycardia">Тахикардия</string>
+    <string name="txtUpperPressure">Верхнее давление</string>
+    <string name="editUpperPressure" />
+    <string name="txtLowerPressure">Нижнее давление</string>
+    <string name="editLowerPressure" />
+    <string name="notEnoughData">Введены не все данные</string>
+    <string name="incorrectFormat">Неверный формат</string>
+    <string name="cardSaved">Сохранена карточка пациента:</string>
+    <string name="Saved">Данные пациента сохранены</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>   <!-- ширина бара -->
+        <item name="android:layout_height">?attr/actionBarSize</item>   <!-- высота бара -->
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>  <!--   стиль бара -->
+        <item name="android:background">@color/colorPrimary</item>    <!--   цвет бара -->
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/colorTitleTxt</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Toolbar.SubTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">@color/colorSubtitleTxt</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>
