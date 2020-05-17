@@ -1,11 +1,11 @@
 package com.example.healthmonitoringsystem;
 
 public class Indicators {
-    float Weight;
-    int Steps;
+    float weight;
+    int steps;
 
-    public Indicators(int Weight, int Steps) {
-        this.Weight = Weight;
-        this.Steps = Steps;
+    public Indicators(int weight, int steps) {
+        this.weight = weight;
+        this.steps = steps;
     }
 }

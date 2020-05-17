@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class PressureActivity extends AppCompatActivity {
     private static final String TAG = "Индивидуальные показатели";
-    ArrayList<Pressure> PressureList = new ArrayList<>();
+    ArrayList<Pressure> pressureList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,29 +38,32 @@ public class PressureActivity extends AppCompatActivity {
         buttonSavePressure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String UpperPressure = patientUpperPressure.getText().toString();
-                String LowerPressure = patientLowerPressure.getText().toString();
-                String Pulse = patientPulse.getText().toString();
-                boolean Tachycardia = patientTachycardia.isChecked();
-                String DataTime = textDataTime.getText().toString();
+                String upperPressure = patientUpperPressure.getText().toString();
+                String lowerPressure = patientLowerPressure.getText().toString();
+                String pulse = patientPulse.getText().toString();
+                boolean tachycardia = patientTachycardia.isChecked();
+                String dataTime = textDataTime.getText().toString();
 
-                if ((UpperPressure.length() == 0) || (LowerPressure.length() == 0) || (Pulse.length() == 0)) {
+                if (upperPressure.isEmpty() || lowerPressure.isEmpty() || pulse.isEmpty()) {
 // выводим сообщение "Введены не все данные"
                     Toast.makeText(PressureActivity.this, getString(R.string.notEnoughData), Toast.LENGTH_LONG).show();
                     return;
                 }
+                int upperOfPressure;
+                int lowerOfPressure;
+                int pulseOf;
                 try {
-                    Integer.parseInt(UpperPressure);
-                    Integer.parseInt(LowerPressure);
-                    Integer.parseInt(Pulse);
+                    upperOfPressure = Integer.parseInt(upperPressure);
+                    lowerOfPressure = Integer.parseInt(lowerPressure);
+                    pulseOf = Integer.parseInt(pulse);
                 } catch (Exception ex) {
 // выводим сообщение "Неверный формат" и сообщение в лог "Введены не корректные данные"
                     Toast.makeText(PressureActivity.this, getString(R.string.incorrectFormat), Toast.LENGTH_LONG).show();
                     Log.i(TAG, "Введены не корректные данные");
                     return;
                 }
-                Pressure pressure = new Pressure(Integer.parseInt(UpperPressure), Integer.parseInt(LowerPressure), Integer.parseInt(Pulse),DataTime, Tachycardia);
-                PressureList.add(pressure);
+                Pressure pressure = new Pressure(upperOfPressure, lowerOfPressure, pulseOf, dataTime, tachycardia);
+                pressureList.add(pressure);
 // выводим сообщение "Данные пациента сохранены"
                 Toast.makeText(PressureActivity.this, getString(R.string.Saved), Toast.LENGTH_LONG).show();
             }

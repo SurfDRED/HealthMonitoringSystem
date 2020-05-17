@@ -1,11 +1,11 @@
 package com.example.healthmonitoringsystem;
 
 public class Patient {
-    String User;
-    int Age;
+    String user;
+    int age;
 
-    public Patient (String User, int Age) {
-        this.User = User;
-        this.Age = Age;
+    public Patient (String user, int age) {
+        this.user = user;
+        this.age = age;
     }
 }

@@ -1,15 +1,15 @@
 package com.example.healthmonitoringsystem;
 
 public class Pressure {
-    int PressureUp, PressureLow, Pulse;
-    boolean Tachycardia;
-    String DataMeasurement;
+    int pressureUp, pressureLow, pulse;
+    boolean tachycardia;
+    String dataMeasurement;
 
-    public Pressure(int PressureUp, int PressureLow, int Pulse, String DataMeasurement, boolean Tachycardia) {
-        this.PressureUp = PressureUp;
-        this.PressureLow = PressureLow;
-        this.Pulse = Pulse;
-        this.Tachycardia = Tachycardia;
-        this.DataMeasurement = DataMeasurement;
+    public Pressure(int pressureUp, int pressureLow, int pulse, String dataMeasurement, boolean tachycardia) {
+        this.pressureUp = pressureUp;
+        this.pressureLow = pressureLow;
+        this.pulse = pulse;
+        this.tachycardia = tachycardia;
+        this.dataMeasurement = dataMeasurement;
     }
 }
